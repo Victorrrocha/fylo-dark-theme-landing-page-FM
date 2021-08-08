@@ -1,0 +1,102 @@
+@import './variables';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body{
+    background-color: $primary-intro-email-bg;
+    
+}
+
+main {
+    @include flex(column);
+    align-items: center;
+    width: 100vw;
+}
+
+.header{
+    @include flex(row);
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px;
+    padding: 40px;
+    font-family: $Raleway;
+    font-weight: 400
+}
+
+.nav-items{
+    @include flex(row);
+    list-style-type: none;
+    min-width: 270px;
+    justify-content: space-between;
+}
+
+.intro {
+    font-family: $Raleway;
+    width: 100%;;
+    font-weight: 700;
+    background: url('../images/bg-curvy-desktop.svg') bottom no-repeat;
+    background-position-y: 410px;
+    display: flex;
+    justify-content: center;
+    //margin-bottom: 350px;
+
+    .intro-content{
+        width: 40vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        color: white;
+
+        img{
+            max-width: 100%;
+            align-self: center;
+        }
+
+        h1{
+            font-size: 32px;
+            width: 90%;
+            margin: auto;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 400;
+            width: 75%;
+            margin: auto;
+        }
+
+        button{
+            width: fit-content;
+            margin: auto;
+            color: white;
+            font-family: $Raleway;
+            font-size: 15px;
+            font-weight: 700;
+            padding: 21px 97px;
+            border-radius: 28px;
+            border: none;
+            background: linear-gradient(to right, $accent-calltoaction-gradient_1, $accent-calltoaction-gradient_2);
+            cursor: pointer;
+        }
+
+        button:hover{
+            background: linear-gradient(to right, $accent-calltoaction-gradient_1, $accent-calltoaction-gradient_1);;
+        }
+
+    }
+}
+
+
+.info {
+    height: fit-content
+}

@@ -1,0 +1,19 @@
+$primary-intro-email-bg: hsl(217, 28%, 15%);
+$primary-main-bg: #181F2B;
+$primary-footer-bg: hsl(216, 53%, 9%);
+$primary-testimonial-bg: hsl(219, 30%, 18%);
+
+$accent-calltoaction-gradient_1: hsl(176, 68%, 64%);
+$accent-calltoaction-gradient_2: hsl(198, 60%, 50%);
+$accent-error: hsl(0, 100%, 63%);
+
+//fonts
+$Raleway: 'Raleway', sans-serif;
+$open-sans: 'Open Sans', sans-serif;
+
+
+@mixin flex($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
+
