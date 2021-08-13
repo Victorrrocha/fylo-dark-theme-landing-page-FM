@@ -19,17 +19,26 @@ body{
 main {
     @include flex(column);
     align-items: center;
-    width: 100vw;
+    width: auto;
+    padding: 0;
+    margin: 0;
 }
 
 .header{
     @include flex(row);
+    width: 100%;
+    max-width: 1300px;
     align-items: center;
     justify-content: space-between;
-    margin: 40px;
+    margin: 40px auto;
     padding: 40px;
     font-family: $Raleway;
     font-weight: 400
+}
+
+.container {
+    width: 90%;
+    max-width: 1300px
 }
 
 .nav-items{
@@ -44,18 +53,21 @@ main {
     width: 100%;;
     font-weight: 700;
     background: url('../images/bg-curvy-desktop.svg') bottom no-repeat;
-    background-position-y: 410px;
+    background-size: contain;
     display: flex;
     justify-content: center;
-    //margin-bottom: 350px;
+    padding-bottom: 4em;
+    // border: 2px dotted white;
 
     .intro-content{
-        width: 40vw;
+        width: 90%;
+        max-width: 1300px;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
         color: white;
+        // border: 2px dotted white;
 
         img{
             max-width: 100%;
@@ -64,15 +76,19 @@ main {
 
         h1{
             font-size: 32px;
-            width: 90%;
+            width: 50%;
             margin: auto;
+            margin-bottom: 1em;
+            line-height: 40px
         }
 
         h3 {
             font-size: 18px;
             font-weight: 400;
-            width: 75%;
+            width: 35%;
             margin: auto;
+            font-family: $open-sans;
+            margin-bottom: 1.5em;
         }
 
         button{
@@ -80,13 +96,14 @@ main {
             margin: auto;
             color: white;
             font-family: $Raleway;
-            font-size: 15px;
+            font-size: 18px;
             font-weight: 700;
             padding: 21px 97px;
             border-radius: 28px;
             border: none;
             background: linear-gradient(to right, $accent-calltoaction-gradient_1, $accent-calltoaction-gradient_2);
             cursor: pointer;
+            margin-bottom: 2em;
         }
 
         button:hover{
@@ -98,5 +115,359 @@ main {
 
 
 .info {
-    height: fit-content
+    height: fit-content;
+    width: 100%;
+    background-color: $primary-main-bg;
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding-bottom: 6em;
+
+    .info-content-container{
+        max-width: 1300px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+        justify-content: space-around;
+        align-items: center;
+
+        align-items: center
+    }
+
+    .info-content{
+        @include flex(column);
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        min-width: 355px;
+        margin: auto;
+        margin-bottom: 2em;
+        //height: 215px;
+        text-align: center;
+    }
+
+    .info-content-title{
+        font-family: $Raleway;
+        font-weight: 700;
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 8px;
+    }
+
+    .info-content-text{
+        font-family: $open-sans;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 23px
+    }
+}
+
+.stay-productive{
+    width: 100%;
+    height: fit-content;
+    background-color: $primary-main-bg;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 9em;
+
+    .container{
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 50px;
+        justify-items: center;
+        align-items: center;
+        color: white;
+
+        .image {
+            width: 100%;
+            height: auto;
+        }
+        h1 {
+            font-size: 32px;  
+            font-family: $Raleway;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+    
+        p {
+            font-family: $open-sans;
+            font-size: 15px;
+            font-weight: 400;
+            margin-bottom: 18px;
+        }
+        a {
+            
+            div {
+                color: $accent-calltoaction-gradient_1;
+                width: fit-content;
+                display: flex;
+                align-items: center;
+                border-bottom: 2px solid $accent-calltoaction-gradient_1;
+                padding-bottom: 5px;
+        
+                h4 {
+                    font-family: $open-sans;
+                    margin-right: 10px;
+                    vertical-align: middle;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+.testimonials{
+    background-color: $primary-main-bg;
+    width: 100%;
+    height: fit-content;
+    color: white;
+    font-family: $open-sans;
+
+    
+
+    .wrapper{
+        width: 90%;
+        max-width: 1300px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        position: relative;
+        
+        .quotes{
+            position: absolute;
+            top: -30px;
+            left: -20px;
+            z-index: 0;
+        }
+
+        .testimonial{
+            background-color: $primary-testimonial-bg;
+            border-radius: 5px;
+            width: 30%;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            padding: 2em 2em;
+            justify-content: space-around;
+            z-index: 2;
+
+            p{
+                font-weight: 400;
+                font-size: 15px;
+            }
+
+            .user{
+                margin-top: 1em;
+                display: flex;
+
+                p{
+                    font-size: 10px;
+                }
+            }
+        }
+        
+
+        .avatar-container{
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            overflow: hidden;
+            margin-right: 10px;
+
+            .avatar{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+.early-access-section{
+    background-color: $primary-main-bg;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    .early-access-container{
+        background-color: $primary-intro-email-bg;
+        box-shadow: 2px 3px 20px rgb(2, 9, 17);
+        width: 90%;
+        max-width: 850px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 50px 70px;
+        border-radius: 10px;
+        color: white;   
+        position: absolute;
+        top: 190px;
+    }
+
+    h1{
+        font-family: $Raleway;
+        font-weight: 700;
+        margin-bottom: 1em;
+    }
+
+    p{
+        font-family: $open-sans;
+        font-size: 14px;
+        margin-bottom: 1em;
+    }
+
+    .form{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        div{
+            height: 3em;
+            width: 70%;
+            overflow: hidden;
+            border-radius: 300px;
+            justify-content: start;
+            
+
+            input{
+                width: 100%;
+                height: 100%;
+                border-width: 0px;
+                outline: none;
+                border: none;
+                padding-left: 20px;
+            }
+
+           
+        }
+
+        .error-message{
+            position: absolute;
+            color: $accent-error;
+            width: 100%;
+            top: 55px;
+            left: 40px;
+            font-size: 13px;
+            z-index: 2;
+            text-align: start;
+        }
+
+        button{
+            justify-self: flex-end;
+            color: white;
+            font-family: $Raleway;
+            font-size: 16px;
+            font-weight: 700;
+            height: 3em;
+            min-width: fit-content;
+      
+            width: 25%;
+            border-radius: 50px;
+            border: none;
+            background: linear-gradient(to right, $accent-calltoaction-gradient_1, $accent-calltoaction-gradient_2);
+            cursor: pointer;
+        }
+
+        button:hover,
+        button:focus {
+            background: linear-gradient(to right, $accent-calltoaction-gradient_1, $accent-calltoaction-gradient_1);;
+        }
+    }
+    
+    
+}
+
+footer {
+    width: 100%;
+    padding-top: 13em;
+    padding-bottom: 7em;
+    background-color: $primary-footer-bg;
+    color: white;
+    font-family: $open-sans;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+
+    .footer-container{
+        // border: 2px dotted white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 95%;
+        max-width: 1300px;
+        margin: auto;
+        font-size: 0.9em;
+
+        .logo{
+            width: 200px;
+            height: auto;
+            margin-bottom: 1.5em;
+        }
+
+        .footer-info{
+            display: flex;
+            justify-content: space-between;
+
+            .col{
+                display: flex;
+                flex-direction: column;
+                // border: 2px dotted white;
+
+                p, a {
+                    margin-bottom: 0.75em;
+                }
+            }
+
+            .col-1{
+                width: 25%;
+                flex-direction: row;
+                
+            }
+
+            .col-1::before {
+                content: url('../images/icon-location.svg');
+                margin-right: 1em;
+                vertical-align: middle;
+            }
+
+
+            .col-2{
+                width: 20%;
+                
+            }
+
+            .col-3 {
+                width: 15%;
+            }
+
+            .phone::before {
+                content: url('../images/icon-phone.svg');
+                margin-right: 1em;
+                vertical-align: middle;
+            }
+
+            .email::before {
+                content: url('../images/icon-email.svg');
+                margin-right: 1em;
+                vertical-align: middle;
+            }
+
+            .flex-row {
+                flex-direction: row;
+                width: 15%;
+                justify-content: center;
+                a {
+                    padding-right: 1em;
+                }
+            }
+        }
+    }
 }
