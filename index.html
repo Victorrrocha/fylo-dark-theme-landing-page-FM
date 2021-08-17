@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="stylesheet" href="./styles/styles-mobile.css">
+  <link rel="stylesheet" href="./styles/styles.css">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +24,7 @@
       <div class="nav-container">
         
         <div class="logo-container">
-          <img class="logo" src="./images/logo.svg" alt="logo">
+          <img class="logo" src="./images/logo.svg" alt="Fylo-logo-on-navigation-bar">
         </div>
 
         <nav>
@@ -46,7 +46,7 @@
       <div class="container">
 
         <div class="img-container">
-          <img src="./images/illustration-intro.png" alt="illustration-intro">
+          <img src="./images/illustration-intro.png" alt="illustration of intro section">
         </div>
         
         <div class="intro-text-container">
@@ -81,7 +81,7 @@
 
         <div class="info-content">
           <div class="icon-container">
-            <img src="./images/icon-security.svg" alt="security">
+            <img src="./images/icon-security.svg" alt="security image">
           </div>
 
           <p class="info-content-title">Security you can trust</p>
@@ -91,7 +91,7 @@
 
         <div class="info-content">
           <div class="icon-container">
-            <img src="./images/icon-collaboration.svg" alt="collaboration">
+            <img src="./images/icon-collaboration.svg" alt="collaboration image">
           </div>
           <p class="info-content-title">Real-time collaboration</p>
           <p class="info-content-text">Securely share files and folders with friends, family and colleagues for live collaboration. 
@@ -100,7 +100,7 @@
 
         <div class="info-content">
           <div class="icon-container">
-            <img src="./images/icon-any-file.svg" alt="any file">
+            <img src="./images/icon-any-file.svg" alt="files images">
           </div>
           <p class="info-content-title">Store any type of file</p>
           <p class="info-content-text">Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all 
@@ -130,7 +130,7 @@
           <div class="see-how-fylo-works">
             <a href="#">
               <div class="see-how-fylo-works-container">
-                <h4>See how Fylo works</h4>
+                <p class="see-how-fylo-works-link">See how Fylo works</p>
                 <div class="arrow-img-container">
                   <img src="/images/icon-arrow.svg" alt="arrow">
                 </div>
@@ -226,7 +226,8 @@
               <div class="form-container">
                 
                 <div class="input-container">
-                  <input type="email" placeholder="johnappleseed#email.com" required>
+                  <label class="label-accessitivity" for="email">enter your email</label>
+                  <input type="email" id="email" name="email" placeholder="johnappleseed#email.com" required>
                 </div>
 
                 <!-- <p class="error-message">Please enter a valid email address</p> -->
@@ -260,33 +261,46 @@
         </div>
 
         <div class="footer-info-section col-2">
-          <p class="phone">+1-543-123-4567</p>
+          <p class="phone" >+1-543-123-4567</p>
           <p class="email">example@fylo.com</p>
         </div>
 
         <div class="footer-info-section col-3">
-          <a href="#">About Us</a>
-          <a href="#">Jobs</a>
-          <a href="#">Press</a>
-          <a href="#">Blog</a>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
         </div>
 
         <div class="footer-info-section col-3">
-          <a href="#">Contact Us</a>
-          <a href="#">Terms</a>
-          <a href="#">Privacy</a>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy</a></li>
+          </ul>
         </div>
 
         <div class="footer-info-section row col-2">
-          <div class="footer-icon">
-            <a href="#"><img src="./images/favicon-32x32.png" alt="facebook"></a>
-          </div>
-          <div class="footer-icon">
-            <a href="#"><img src="./images/favicon-32x32.png" alt="twitter"></a>
-          </div>
-          <div class="footer-icon">
-            <a href="#"><img src="./images/favicon-32x32.png" alt="instagram"></a>
-          </div>
+
+          <ul class="nav-items">
+            <li>
+              <div class="footer-icon">
+                <a href="#"><img src="./images/favicon-32x32.png" alt="facebook"></a>
+              </div>
+            </li>
+            <li>
+              <div class="footer-icon">
+                <a href="#"><img src="./images/favicon-32x32.png" alt="twitter"></a>
+              </div>
+            </li>
+            <li>
+              <div class="footer-icon">
+                <a href="#"><img src="./images/favicon-32x32.png" alt="instagram"></a>
+              </div>
+            </li>
+          </ul>
         </div>
 
         </div>
